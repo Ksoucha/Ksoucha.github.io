@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: floralwhite;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: thistle;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: midnightblue;
+}
+
+header .logo span {
+    color: snow;
+}
+
+header .menu-options {
+    display: flex;
+}
+
+header .menu-options li {
+    margin-left: 20px;
+}
+
+header .menu-options li a {
+    color: black;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header .menu-options li a:hover,
+header .menu-options li.active a {
+    color: snow;
+}
+
+.menu {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+header a:visited, header a:active {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px white dotted;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px white dotted;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.title-desc {
+    margin: 100px auto 50px auto;
+    text-align: center;
+    width: 60%;
+    max-width: 600px;
+}
+
+.title-desc h1 {
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.mySlides {
+    display: none;
+    border-radius: 10px;
+}
+
+.map {
+    text-align: center;
+    margin: 30px;
+}
+
+.map h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.map p {
+    margin-bottom: 30px;
+}
+
+.map iframe {
+    box-sizing: border-box;
+}
+
+iframe {
+    border: 0;
+    width: 80%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.gif-section {
+    text-align: center;
+    margin: 30px;
+}
+
+.gif-section h2 {
+    margin-bottom: 20px;
+}
+
+.gif-section img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+    color: #F2F2F2;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.text {
+    color: black;
+    font-size: 15px;
+    font-family: Garamond;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.text1 {
+    color: black;
+    font-size: 15px;
+    font-family: Garamond;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    top: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.dots-container {
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #BBBBBB;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+    background-color: #717171;
+}
+
+.active:not(li.active) {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.4s;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 900px) {
+    .title-desc {
+        width: 80%;
+        max-width: none;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-desc {
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .title-desc h1 {
+        font-size: 18px;
+        border-radius: 10px;
+    }
+
+    .title-desc p {
+        font-size: 0.95rem;
+    }
+}

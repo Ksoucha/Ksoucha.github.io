@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: thistle;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: midnightblue;
+}
+
+header .logo span {
+    color: snow;
+}
+
+header .menu-options {
+    display: flex;
+}
+
+header .menu-options li {
+    margin-left: 20px;
+}
+
+header .menu-options li a {
+    color: black;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+header .menu-options li a:hover,
+header .menu-options li.active a {
+    color: snow;
+}
+
+.menu {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+header a, header a:visited, header a:active {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px white dotted;
+}
+
+a {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.projects-section {
+    margin-top: 50px;
+    padding: 60px 20px;
+    background-color: #FFF;
+}
+
+.projects-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.projects-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-item {
+    background: #FFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+}
+
+.item-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.project-item:hover .item-image img {
+    transform: scale(1.1);
+}
+
+.item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+}
+
+.item-overlay h3 {
+    color: #FFF;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+}
+
+.item-details {
+    padding: 20px;
+}
+
+.tags {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tag {
+    font-size: 0.8rem;
+    color: #FFF;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    font-family: "Quicksand", sans-serif;
+}
+
+.contributions-list h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #444;
+    font-weight: 600;
+    text-align: left;
+    font-family: "Quicksand", sans-serif;
+}
+
+.contributions-list ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-top: 1px solid #EEE;
+    padding-top: 10px;
+}
+
+.contributions-list li {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+    padding-left: 15px;
+    position: relative;
+    margin-bottom: 5px;
+    text-align: left;
+    font-family: "Quicksand", sans-serif;
+}
+
+.contributions-list li::before {
+    content: "\2022";
+    color: #00BCD4;
+    font-weight: bold;
+    display: inline-block;
+    width: 0.4em;
+    margin-left: -0.4em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.project-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.project-links a {
+    color: #333;
+    display: inline-block;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.project-links a ion-icon {
+    font-size: 32px;
+}
+
+.project-links a:hover {
+    color: #00BCD4;
+    transform: scale(1.1);
+}
